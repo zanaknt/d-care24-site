@@ -61,7 +61,7 @@ export const Header: React.FC = () => {
             onClick={() => scrollToSection('hero')}
           >
             <img
-              src="/logo_white.png"
+              src="/logo-white.svg"
               alt="D-Care24+"
               className="h-10 md:h-12 object-contain"
             />
