@@ -1,0 +1,14 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Placeholder - Replace this with your actual logo -->
+  <!-- D icon circle -->
+  <circle cx="25" cy="30" r="20" fill="#06B6D4" opacity="0.2"/>
+  <circle cx="25" cy="30" r="15" fill="#06B6D4"/>
+  
+  <!-- D letter -->
+  <text x="17" y="38" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">D</text>
+  
+  <!-- D-Care24+ text -->
+  <text x="50" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="white">
+    -Care24<tspan fill="#06B6D4">+</tspan>
+  </text>
+</svg>

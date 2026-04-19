@@ -1,0 +1,306 @@
+/* ========================================
+   D-Care24+ CUSTOM STYLES
+   Tıbbi bakım renk şeması + Modern animasyonlar
+   ======================================== */
+
+/* VARIABLES */
+:root {
+    --primary-blue: #0891b2;
+    --secondary-teal: #14b8a6;
+    --soft-gray: #f3f3f5;
+    --dark-text: #1e293b;
+    --light-bg: #ffffff;
+}
+
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* HEADER STYLES */
+#main-header {
+    transition: all 0.3s ease;
+}
+
+#main-header.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    position: relative;
+    color: #4b5563;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-blue);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* HERO SLIDER */
+.slider-container {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.slider-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-image.active {
+    opacity: 1;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active,
+.slider-dot:hover {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up-delay {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.animate-fade-in-up-delay-2 {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+/* SERVICE CARDS */
+.service-card {
+    transform-origin: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* CTA BUTTONS */
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(8, 145, 178, 0.3);
+}
+
+/* CALCULATOR ANIMATIONS */
+#calculated-price {
+    transition: all 0.3s ease;
+}
+
+.price-update {
+    animation: priceUpdate 0.5s ease;
+}
+
+@keyframes priceUpdate {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); color: var(--secondary-teal); }
+}
+
+/* FORM STYLES */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary-blue) !important;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.1);
+}
+
+/* FORM MESSAGE STYLES */
+.form-success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+}
+
+.form-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #ef4444;
+}
+
+/* SCROLL ANIMATIONS */
+.scroll-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.scroll-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* LEGAL PAGES */
+.legal-content {
+    max-width: 800px;
+}
+
+.legal-content h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+}
+
+.legal-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
+}
+
+.legal-content strong {
+    color: var(--dark-text);
+}
+
+/* MOBILE MENU */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+#mobile-menu.active {
+    max-height: 400px;
+}
+
+/* LANGUAGE DROPDOWN */
+#lang-dropdown {
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE UTILITIES */
+@media (max-width: 768px) {
+    .slider-image {
+        background-position: 65% center;
+    }
+    
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.75rem !important;
+    }
+}
+
+/* LOADING STATE */
+.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    border: 3px solid var(--primary-blue);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* SMOOTH TRANSITIONS */
+a, button, input, select, textarea {
+    transition: all 0.2s ease;
+}
+
+/* ACCESSIBILITY */
+:focus-visible {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+/* PRINT STYLES */
+@media print {
+    header, footer, #calculator, #contact {
+        display: none;
+    }
+}

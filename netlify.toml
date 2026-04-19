@@ -1,0 +1,92 @@
+# Netlify Configuration for D-Care24+
+# Deployment settings for production-ready React + Vite application
+
+[build]
+  # Build command
+  command = "pnpm install && pnpm build"
+
+  # Output directory after build
+  publish = "dist"
+
+  # Functions directory (if needed later)
+  # functions = "netlify/functions"
+
+# Build environment settings
+[build.environment]
+  NODE_VERSION = "18"
+
+# Redirect all requests to index.html for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent clickjacking
+    X-Frame-Options = "DENY"
+    
+    # Prevent MIME type sniffing
+    X-Content-Type-Options = "nosniff"
+    
+    # XSS Protection
+    X-XSS-Protection = "1; mode=block"
+    
+    # Referrer Policy
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Permissions Policy (disable unused features)
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+
+# Cache control for static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache control for HTML (no cache, always fresh)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Netlify Forms configuration (optional - uncomment if using Netlify Forms)
+# [build.processing]
+#   skip_processing = false
+# [build.processing.css]
+#   bundle = true
+#   minify = true
+# [build.processing.js]
+#   bundle = true
+#   minify = true
+# [build.processing.html]
+#   pretty_urls = true
+# [build.processing.images]
+#   compress = true
+
+# Context-specific build settings
+[context.production]
+  command = "pnpm install && pnpm build"
+
+[context.deploy-preview]
+  command = "pnpm install && pnpm build"
+
+[context.branch-deploy]
+  command = "pnpm install && pnpm build"
+
+# Plugin configuration (optional)
+# [[plugins]]
+#   package = "@netlify/plugin-sitemap"

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="D-Care24+ - Professionelle 24-Stunden-Pflege in Oberösterreich. Qualifizierte Betreuung für Senioren zu Hause.">
+    <meta name="keywords" content="Altenpflege, 24-Stunden-Pflege, Seniorenbetreuung, Oberösterreich, Pflege zu Hause, D-Care24">
+    <title>D-Care24+ | 24-Stunden-Pflege Oberösterreich</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0891b2',
+                        secondary: '#14b8a6',
+                        accent: '#0891b2',
+                        muted: '#f3f3f5',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <!-- HEADER / NAVIGATION -->
+    <header id="main-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md transition-all duration-300">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">D</span>
+                </div>
+                <span class="text-2xl font-bold text-gray-800">D-Care24+</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8 items-center">
+                <li><a href="#home" class="nav-link" data-i18n="nav_home">Home</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+                <li><a href="#calculator" class="nav-link" data-i18n="nav_calculator">Calculator</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+            
+            <!-- Language Selector -->
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <button id="lang-button" class="flex items-center space-x-2 px-4 py-2 bg-muted rounded-lg hover:bg-gray-200 transition-colors">
+                        <span id="current-lang" class="font-semibold">DE</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
+                        <button onclick="changeLanguage('de')" class="lang-option w-full text-left px-4 py-2 hover:bg-primary hover:text-white transition-colors">🇩🇪 Deutsch</button>
+                        <button onclick="changeLanguage('en')" class="lang-option w-full text-left px-4 py-2 hover:bg-primary hover:text-white transition-colors">🇬🇧 English</button>
+                        <button onclick="changeLanguage('sk')" class="lang-option w-full text-left px-4 py-2 hover:bg-primary hover:text-white transition-colors">🇸🇰 Slovenčina</button>
+                        <button onclick="changeLanguage('cz')" class="lang-option w-full text-left px-4 py-2 hover:bg-primary hover:text-white transition-colors">🇨🇿 Čeština</button>
+                        <button onclick="changeLanguage('ru')" class="lang-option w-full text-left px-4 py-2 hover:bg-primary hover:text-white transition-colors">🇷🇺 Русский</button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 pb-4">
+            <a href="#home" class="block px-4 py-3 hover:bg-muted transition-colors" data-i18n="nav_home">Home</a>
+            <a href="#services" class="block px-4 py-3 hover:bg-muted transition-colors" data-i18n="nav_services">Services</a>
+            <a href="#calculator" class="block px-4 py-3 hover:bg-muted transition-colors" data-i18n="nav_calculator">Calculator</a>
+            <a href="#about" class="block px-4 py-3 hover:bg-muted transition-colors" data-i18n="nav_about">About</a>
+            <a href="#contact" class="block px-4 py-3 hover:bg-muted transition-colors" data-i18n="nav_contact">Contact</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION WITH SLIDER -->
+    <section id="home" class="relative h-screen overflow-hidden">
+        <!-- Slider Images -->
+        <div class="slider-container">
+            <div class="slider-image active" style="background-image: url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1920&q=80')"></div>
+            <div class="slider-image" style="background-image: url('https://images.unsplash.com/photo-1581594549595-35f6edc7b762?w=1920&q=80')"></div>
+            <div class="slider-image" style="background-image: url('https://images.unsplash.com/photo-1631815587646-b85a1bb027e1?w=1920&q=80')"></div>
+        </div>
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/40"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-4 h-full flex items-center">
+            <div class="max-w-3xl text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up" data-i18n="hero_title">
+                    24-Stunden-Pflege in Oberösterreich
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200 animate-fade-in-up-delay" data-i18n="hero_subtitle">
+                    Professionelle und liebevolle Betreuung für Ihre Angehörigen – rund um die Uhr
+                </p>
+                <div class="flex flex-wrap gap-4 animate-fade-in-up-delay-2">
+                    <a href="#calculator" class="cta-button bg-primary hover:bg-cyan-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1" data-i18n="hero_cta_primary">
+                        Kostenlos berechnen
+                    </a>
+                    <a href="#contact" class="cta-button bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 border-2 border-white/50" data-i18n="hero_cta_secondary">
+                        Kontakt aufnehmen
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Indicators -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+            <button class="slider-dot active" onclick="goToSlide(0)"></button>
+            <button class="slider-dot" onclick="goToSlide(1)"></button>
+            <button class="slider-dot" onclick="goToSlide(2)"></button>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4" data-i18n="services_title">Unsere Leistungen</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto" data-i18n="services_subtitle">
+                    Umfassende Betreuung und Pflege für jeden Bedarf
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-muted rounded-xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800" data-i18n="service1_title">24-Stunden-Betreuung</h3>
+                    <p class="text-gray-600" data-i18n="service1_desc">
+                        Rund-um-die-Uhr Betreuung durch qualifiziertes Personal in der gewohnten Umgebung
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-muted rounded-xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800" data-i18n="service2_title">Medizinische Pflege</h3>
+                    <p class="text-gray-600" data-i18n="service2_desc">
+                        Professionelle medizinische Versorgung und Betreuung bei speziellen Bedürfnissen
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-muted rounded-xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800" data-i18n="service3_title">Haushaltsführung</h3>
+                    <p class="text-gray-600" data-i18n="service3_desc">
+                        Unterstützung im Alltag und bei der Haushaltsführung für mehr Lebensqualität
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR SECTION -->
+    <section id="calculator" class="py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4" data-i18n="calc_title">Kostenrechner</h2>
+                <p class="text-xl text-gray-600" data-i18n="calc_subtitle">
+                    Berechnen Sie Ihre individuelle Pflegekosten
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+                <form id="calculator-form" class="space-y-6">
+                    <!-- Care Level -->
+                    <div>
+                        <label class="block text-lg font-semibold mb-3 text-gray-700" data-i18n="calc_care_level">Pflegestufe</label>
+                        <select id="care-level" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                            <option value="1">Stufe 1</option>
+                            <option value="2">Stufe 2</option>
+                            <option value="3">Stufe 3</option>
+                            <option value="4">Stufe 4</option>
+                            <option value="5">Stufe 5</option>
+                            <option value="6">Stufe 6</option>
+                            <option value="7">Stufe 7</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Care Type -->
+                    <div>
+                        <label class="block text-lg font-semibold mb-3 text-gray-700" data-i18n="calc_care_type">Betreuungsart</label>
+                        <select id="care-type" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                            <option value="basic" data-i18n-option="calc_type_basic">Grundbetreuung</option>
+                            <option value="extended" data-i18n-option="calc_type_extended">Erweiterte Betreuung</option>
+                            <option value="intensive" data-i18n-option="calc_type_intensive">Intensivbetreuung</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Additional Services -->
+                    <div>
+                        <label class="block text-lg font-semibold mb-3 text-gray-700" data-i18n="calc_additional">Zusatzleistungen</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted cursor-pointer transition-colors">
+                                <input type="checkbox" class="additional-service w-5 h-5 text-primary rounded" data-price="200">
+                                <span data-i18n="calc_add_medical">Medizinische Versorgung</span>
+                                <span class="ml-auto text-gray-600">+€200</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted cursor-pointer transition-colors">
+                                <input type="checkbox" class="additional-service w-5 h-5 text-primary rounded" data-price="150">
+                                <span data-i18n="calc_add_therapy">Physiotherapie</span>
+                                <span class="ml-auto text-gray-600">+€150</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted cursor-pointer transition-colors">
+                                <input type="checkbox" class="additional-service w-5 h-5 text-primary rounded" data-price="100">
+                                <span data-i18n="calc_add_transport">Fahrdienst</span>
+                                <span class="ml-auto text-gray-600">+€100</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Result -->
+                    <div class="pt-6 border-t-2 border-gray-200">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xl font-semibold text-gray-700" data-i18n="calc_monthly_cost">Monatliche Kosten:</span>
+                            <span id="calculated-price" class="text-4xl font-bold text-primary">€2.500</span>
+                        </div>
+                        <button type="button" onclick="window.location.hash='#contact'" class="w-full bg-primary hover:bg-cyan-700 text-white py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl" data-i18n="calc_cta">
+                            Beratungsgespräch anfragen
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6" data-i18n="about_title">Über D-Care24+</h2>
+                    <p class="text-lg text-gray-600 mb-6" data-i18n="about_text1">
+                        Seit über 10 Jahren bieten wir professionelle Pflegedienstleistungen in Oberösterreich an. Unser erfahrenes Team aus qualifizierten Pflegekräften steht Ihnen mit Herz und Kompetenz zur Seite.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8" data-i18n="about_text2">
+                        Wir legen großen Wert auf individuelle Betreuung und orientieren uns an den Bedürfnissen unserer Klienten. Vertrauen, Transparenz und höchste Qualität sind unsere Grundprinzipien.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-6 bg-muted rounded-xl">
+                            <div class="text-4xl font-bold text-primary mb-2">500+</div>
+                            <div class="text-gray-600" data-i18n="about_stat1">Zufriedene Klienten</div>
+                        </div>
+                        <div class="text-center p-6 bg-muted rounded-xl">
+                            <div class="text-4xl font-bold text-primary mb-2">10+</div>
+                            <div class="text-gray-600" data-i18n="about_stat2">Jahre Erfahrung</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80" alt="Senior care" class="rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-xl shadow-xl">
+                        <div class="text-3xl font-bold mb-1">24/7</div>
+                        <div data-i18n="about_availability">Verfügbar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4" data-i18n="contact_title">Kontaktieren Sie uns</h2>
+                <p class="text-xl text-gray-600" data-i18n="contact_subtitle">
+                    Wir sind für Sie da – persönlich und unverbindlich
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-700" data-i18n="form_name">Name *</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-700" data-i18n="form_email">E-Mail *</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-700" data-i18n="form_phone">Telefon</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-700" data-i18n="form_message">Nachricht *</label>
+                            <textarea id="message" required rows="4" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary hover:bg-cyan-700 text-white py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl" data-i18n="form_submit">
+                            Nachricht senden
+                        </button>
+                        
+                        <div id="form-message" class="hidden p-4 rounded-lg"></div>
+                    </form>
+                </div>
+                
+                <!-- Contact Info & Chatbot -->
+                <div class="space-y-8">
+                    <!-- Contact Info -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800" data-i18n="contact_info_title">Kontaktinformationen</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800" data-i18n="contact_address_label">Adresse</div>
+                                    <div class="text-gray-600">Hauptstraße 123<br>4020 Linz, Oberösterreich</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800" data-i18n="contact_phone_label">Telefon</div>
+                                    <div class="text-gray-600">+43 732 123 456</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800" data-i18n="contact_email_label">E-Mail</div>
+                                    <div class="text-gray-600">info@d-care24plus.at</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chatbot -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800" data-i18n="chatbot_title">Live Chat</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="chatbot_desc">Chatten Sie direkt mit unserem Team</p>
+                        <div class="bg-muted rounded-lg p-4 text-center text-gray-500">
+                            <div class="mb-2">💬</div>
+                            <div class="text-sm" data-i18n="chatbot_placeholder">Chatbot würde hier integriert werden</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">D</span>
+                        </div>
+                        <span class="text-xl font-bold">D-Care24+</span>
+                    </div>
+                    <p class="text-gray-400" data-i18n="footer_tagline">
+                        Professionelle Pflege mit Herz
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4" data-i18n="footer_services">Leistungen</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#services" class="hover:text-white transition-colors" data-i18n="footer_service1">24h Betreuung</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors" data-i18n="footer_service2">Medizinische Pflege</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors" data-i18n="footer_service3">Haushaltsführung</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4" data-i18n="footer_company">Unternehmen</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition-colors" data-i18n="footer_about">Über uns</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors" data-i18n="footer_contact">Kontakt</a></li>
+                        <li><a href="#impressum" class="hover:text-white transition-colors" data-i18n="footer_legal">Impressum</a></li>
+                        <li><a href="#datenschutz" class="hover:text-white transition-colors" data-i18n="footer_privacy">Datenschutz</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4" data-i18n="footer_contact_title">Kontakt</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>+43 732 123 456</li>
+                        <li>info@d-care24plus.at</li>
+                        <li>Hauptstraße 123<br>4020 Linz, Österreich</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 D-Care24+. <span data-i18n="footer_copyright">Alle Rechte vorbehalten.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Legal Pages (Hidden by default) -->
+    <div id="legal-pages" class="hidden fixed inset-0 bg-white z-50 overflow-y-auto">
+        <div class="container mx-auto px-4 py-8">
+            <button onclick="closeLegalPage()" class="mb-4 flex items-center space-x-2 text-primary hover:text-cyan-700 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                <span data-i18n="legal_back">Zurück</span>
+            </button>
+            
+            <div id="impressum-content" class="hidden legal-content">
+                <h1 class="text-4xl font-bold mb-8" data-i18n="impressum_title">Impressum</h1>
+                <div class="prose max-w-none">
+                    <h2 data-i18n="impressum_company_info">Firmeninformationen</h2>
+                    <p>
+                        D-Care24+ GmbH<br>
+                        Hauptstraße 123<br>
+                        4020 Linz, Oberösterreich<br>
+                        Österreich
+                    </p>
+                    
+                    <h2 data-i18n="impressum_contact">Kontakt</h2>
+                    <p>
+                        <strong>Telefon:</strong> +43 732 123 456<br>
+                        <strong>E-Mail:</strong> info@d-care24plus.at<br>
+                        <strong>Website:</strong> www.d-care24plus.at
+                    </p>
+                    
+                    <h2 data-i18n="impressum_register">Handelsregister</h2>
+                    <p>
+                        Firmenbuchnummer: FN 123456x<br>
+                        Firmenbuchgericht: Linz<br>
+                        UID-Nummer: ATU12345678
+                    </p>
+                </div>
+            </div>
+            
+            <div id="datenschutz-content" class="hidden legal-content">
+                <h1 class="text-4xl font-bold mb-8" data-i18n="privacy_title">Datenschutzerklärung</h1>
+                <div class="prose max-w-none">
+                    <h2 data-i18n="privacy_intro_title">Einleitung</h2>
+                    <p data-i18n="privacy_intro_text">
+                        Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003).
+                    </p>
+                    
+                    <h2 data-i18n="privacy_collection_title">Datenerfassung</h2>
+                    <p data-i18n="privacy_collection_text">
+                        Wenn Sie mit uns in Kontakt treten, werden Ihre angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
+                    </p>
+                    
+                    <h2 data-i18n="privacy_rights_title">Ihre Rechte</h2>
+                    <p data-i18n="privacy_rights_text">
+                        Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
