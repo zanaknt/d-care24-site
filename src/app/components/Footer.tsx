@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-1">
             {/* Logo */}
             <img
-              src="/logo_white.png"
+              src="/logo-white.svg"
               alt="D-Care24+"
               className="h-10 object-contain mb-4"
             />
