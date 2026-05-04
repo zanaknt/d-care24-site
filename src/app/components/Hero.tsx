@@ -3,18 +3,16 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
-// Background images for the hero slider
 const HERO_BACKGROUND_IMAGES = [
-  'https://images.unsplash.com/photo-1773227060446-93239a553f1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920',
-  'https://images.unsplash.com/photo-1765896387398-1e1ae8d2eb85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920',
-  'https://images.unsplash.com/photo-1772791002745-e9d5a1ff81bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920'
+  'https://images.unsplash.com/photo-1773227060446-93239a553f1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200',
+  'https://images.unsplash.com/photo-1765896387398-1e1ae8d2eb85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200',
+  'https://images.unsplash.com/photo-1772791002745-e9d5a1ff81bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200',
 ];
 
 export const Hero: React.FC = () => {
   const { t } = useLanguage();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Auto-change background images every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % HERO_BACKGROUND_IMAGES.length);
@@ -26,8 +24,7 @@ export const Hero: React.FC = () => {
     const element = document.getElementById('contact');
     if (element) {
       const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      const offsetPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
@@ -36,58 +33,44 @@ export const Hero: React.FC = () => {
     const element = document.getElementById('services');
     if (element) {
       const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      const offsetPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-24 md:pt-28 pb-12 overflow-hidden">
-      {/* Background Image Slider - More Visible */}
-      <div className="absolute inset-0 z-0">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentImageIndex}
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 1.5, ease: 'easeInOut' }}
-            className="absolute inset-0"
-          >
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ 
-                backgroundImage: `url(${HERO_BACKGROUND_IMAGES[currentImageIndex]})`,
-              }}
-            />
-            {/* Warm overlay preserving image visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-stone-900/65 via-stone-900/55 to-stone-900/65" />
-          </motion.div>
-        </AnimatePresence>
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-[#F8F4EE] via-[#FAFAF8] to-[#EDF2EE] pt-20 md:pt-24 pb-12 overflow-hidden"
+    >
+      {/* Soft decorative background shapes */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-emerald-100/50 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-amber-100/40 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-teal-100/30 rounded-full blur-2xl" />
       </div>
 
-      {/* Subtle warm decorative elements */}
-      <div className="absolute inset-0 z-[1] opacity-25">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-amber-400/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-400/15 rounded-full blur-3xl animate-pulse"
-             style={{ animationDelay: '1s' }}
-        />
-      </div>
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center min-h-[calc(100vh-5rem)] py-8 lg:py-0">
 
-      <div className="container mx-auto px-4 sm:px-6 py-12 md:py-20 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Text and CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          {/* Left: text content */}
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            {/* Trust badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+              className="inline-flex items-center gap-2 mb-5 px-4 py-2 bg-emerald-50 border border-emerald-200 rounded-full text-emerald-700 text-sm font-medium"
+            >
+              <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse flex-shrink-0" />
+              Österreich · Legal · 24-Stunden-Betreuung
+            </motion.div>
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="mb-4 md:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight bg-gradient-to-r from-white via-emerald-50 to-white bg-clip-text text-transparent break-words"
+              className="mb-4 md:mb-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#183028] break-words"
               style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}
             >
               {t('hero.title')}
@@ -96,8 +79,8 @@ export const Hero: React.FC = () => {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl mb-3 md:mb-4 text-emerald-300 font-semibold break-words"
+              transition={{ delay: 0.35, duration: 0.7 }}
+              className="text-lg md:text-xl lg:text-2xl mb-3 text-emerald-700 font-semibold break-words"
               style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}
             >
               {t('hero.subtitle')}
@@ -106,8 +89,8 @@ export const Hero: React.FC = () => {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-sm sm:text-base md:text-lg text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed break-words"
+              transition={{ delay: 0.5, duration: 0.7 }}
+              className="text-stone-600 text-base md:text-lg mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed break-words"
             >
               {t('hero.description')}
             </motion.p>
@@ -115,38 +98,80 @@ export const Hero: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center"
+              transition={{ delay: 0.65, duration: 0.7 }}
+              className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start"
             >
               <button
                 onClick={scrollToContact}
-                className="group px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-800 transition-all duration-300 shadow-lg shadow-emerald-800/40 hover:shadow-emerald-800/60 flex items-center justify-center gap-2 text-sm md:text-base w-full sm:w-auto"
-                aria-label="Request free consultation"
+                className="group px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-xl font-semibold hover:from-emerald-700 hover:to-teal-800 transition-all duration-300 shadow-md shadow-emerald-700/25 hover:shadow-lg hover:shadow-emerald-700/35 flex items-center justify-center gap-2 text-sm md:text-base"
+                aria-label="Kostenloses Erstgespräch anfragen"
               >
                 {t('hero.cta.primary')}
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
                 onClick={scrollToServices}
-                className="px-6 md:px-8 py-3 md:py-4 border-2 border-white/75 text-white rounded-lg font-semibold hover:bg-white hover:text-[#1C3228] transition-all duration-300 text-sm md:text-base w-full sm:w-auto"
-                aria-label="Learn more about our services"
+                className="px-6 md:px-8 py-3 md:py-4 border-2 border-emerald-600 text-emerald-700 rounded-xl font-semibold hover:bg-emerald-50 transition-all duration-300 text-sm md:text-base"
+                aria-label="Unsere Leistungen kennenlernen"
               >
                 {t('hero.cta.secondary')}
               </button>
             </motion.div>
 
-            {/* Floating badge */}
+            {/* Trust indicator */}
             <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 1, duration: 0.5, type: 'spring' }}
-              className="mt-8 md:mt-12 inline-block bg-white/95 backdrop-blur-sm px-4 md:px-6 lg:px-8 py-3 md:py-4 rounded-full shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.85, duration: 0.6 }}
+              className="mt-8 pt-6 border-t border-stone-200/80"
             >
-              <p className="text-[#050B1A] font-bold text-xs md:text-sm lg:text-base">
+              <p className="text-[#183028] font-semibold text-sm md:text-base">
                 {t('hero.badge')}
               </p>
             </motion.div>
-          </motion.div>
+          </div>
+
+          {/* Right: photo slider */}
+          <div className="order-1 lg:order-2 flex flex-col items-center lg:items-end">
+            <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentImageIndex}
+                  initial={{ opacity: 0, scale: 1.04 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.97 }}
+                  transition={{ duration: 1.2, ease: 'easeInOut' }}
+                  className="relative rounded-3xl overflow-hidden shadow-2xl shadow-emerald-900/15 border-4 border-white"
+                >
+                  <img
+                    src={HERO_BACKGROUND_IMAGES[currentImageIndex]}
+                    alt="Professionelle 24h-Betreuung"
+                    className="w-full h-[280px] sm:h-[360px] lg:h-[480px] object-cover"
+                    loading="eager"
+                  />
+                  {/* Very subtle warm bottom gradient for caption area */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/20 via-transparent to-transparent" />
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Slider dots */}
+              <div className="flex gap-2 justify-center mt-4">
+                {HERO_BACKGROUND_IMAGES.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setCurrentImageIndex(i)}
+                    aria-label={`Bild ${i + 1}`}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      i === currentImageIndex
+                        ? 'bg-emerald-600 w-6'
+                        : 'bg-stone-300 w-2 hover:bg-stone-400'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

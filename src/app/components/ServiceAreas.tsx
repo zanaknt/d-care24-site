@@ -194,10 +194,10 @@ export const ServiceAreas: React.FC = () => {
                               )}
                               <button
                                 onClick={() => setActiveRegion(null)}
-                                className="lg:hidden w-7 h-7 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                                className="lg:hidden w-7 h-7 flex items-center justify-center rounded-full bg-stone-100 hover:bg-stone-200 transition-colors"
                                 aria-label="Close"
                               >
-                                <X className="w-4 h-4 text-gray-300" />
+                                <X className="w-4 h-4 text-stone-600" />
                               </button>
                             </div>
                           </div>
