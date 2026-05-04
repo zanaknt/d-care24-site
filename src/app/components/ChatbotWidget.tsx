@@ -26,7 +26,7 @@ export const ChatbotWidget: React.FC = () => {
             exit={{ opacity: 0, scale: 0 }}
             className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 md:right-8 z-50"
           >
-            <div className="relative bg-gradient-to-br from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-2xl rounded-br-none shadow-2xl shadow-cyan-500/50 max-w-[260px] sm:max-w-xs">
+            <div className="relative bg-gradient-to-br from-emerald-600 to-teal-700 text-white px-4 py-3 rounded-2xl rounded-br-none shadow-2xl shadow-emerald-700/40 max-w-[260px] sm:max-w-xs">
               <button
                 onClick={() => setShowPreview(false)}
                 className="absolute -top-2 -right-2 w-6 h-6 bg-white text-gray-800 rounded-full flex items-center justify-center hover:bg-gray-100 transition"
@@ -35,7 +35,7 @@ export const ChatbotWidget: React.FC = () => {
                 <X className="w-4 h-4" />
               </button>
               <p className="pr-4 text-sm md:text-base">{t('chatbot.greeting')}</p>
-              <div className="absolute bottom-0 right-0 w-0 h-0 border-l-[15px] border-l-transparent border-t-[15px] border-t-blue-500" />
+              <div className="absolute bottom-0 right-0 w-0 h-0 border-l-[15px] border-l-transparent border-t-[15px] border-t-teal-700" />
             </div>
           </motion.div>
         )}
@@ -65,7 +65,7 @@ export const ChatbotWidget: React.FC = () => {
         }}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
-        className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 md:right-8 z-50 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-cyan-500 to-blue-500 text-white rounded-full shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 flex items-center justify-center transition-all"
+        className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 md:right-8 z-50 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-full shadow-2xl shadow-emerald-700/40 hover:shadow-emerald-700/60 flex items-center justify-center transition-all"
         aria-label="Open chatbot"
       >
         <AnimatePresence mode="wait">
@@ -100,9 +100,9 @@ export const ChatbotWidget: React.FC = () => {
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             className="fixed bottom-20 sm:bottom-24 md:bottom-28 right-2 sm:right-4 md:right-8 z-40 w-[calc(100vw-1rem)] sm:w-[calc(100vw-2rem)] max-w-md"
           >
-            <div className="bg-[#0A1628] border-2 border-cyan-500/30 rounded-3xl shadow-2xl overflow-hidden">
+            <div className="bg-white border border-stone-200 rounded-3xl shadow-2xl shadow-stone-300/40 overflow-hidden">
               {/* Header */}
-              <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-4 md:p-6">
+              <div className="bg-gradient-to-r from-emerald-600 to-teal-700 p-4 md:p-6">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <MessageCircle className="w-5 h-5 md:w-6 md:h-6 text-white" />

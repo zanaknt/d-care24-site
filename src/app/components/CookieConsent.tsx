@@ -42,16 +42,16 @@ export const CookieConsent: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="fixed bottom-4 sm:bottom-6 left-4 sm:left-6 z-50 max-w-[calc(100vw-5rem)] sm:max-w-sm"
         >
-          <div className="bg-gradient-to-br from-[#0A1628] to-[#050B1A] border-2 border-cyan-500/30 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden">
+          <div className="bg-white border border-stone-200 rounded-2xl shadow-xl shadow-stone-200/60 overflow-hidden">
             {/* Header */}
-            <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 px-4 py-3 border-b border-white/10 flex items-center justify-between">
+            <div className="bg-emerald-50 px-4 py-3 border-b border-stone-200 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Cookie className="w-5 h-5 text-cyan-400" />
-                <h3 className="text-white font-semibold text-sm">Cookie Notice</h3>
+                <Cookie className="w-5 h-5 text-emerald-600" />
+                <h3 className="text-stone-800 font-semibold text-sm">Cookie-Hinweis</h3>
               </div>
               <button
                 onClick={() => setIsVisible(false)}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-stone-400 hover:text-stone-700 transition-colors"
                 aria-label="Close cookie notice"
               >
                 <X className="w-4 h-4" />
@@ -60,15 +60,13 @@ export const CookieConsent: React.FC = () => {
 
             {/* Content */}
             <div className="p-4">
-              <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-4">
-                We use cookies to improve your browsing experience, provide basic analytics, and
-                remember your preferences. By continuing to use this site, you agree to our use of
-                cookies.{' '}
+              <p className="text-stone-600 text-xs md:text-sm leading-relaxed mb-4">
+                Wir verwenden Cookies, um Ihr Erlebnis zu verbessern und grundlegende Analysen zu ermöglichen.{' '}
                 <button
                   onClick={scrollToPrivacy}
-                  className="text-cyan-400 hover:underline inline"
+                  className="text-emerald-700 hover:underline inline"
                 >
-                  Learn more
+                  Mehr erfahren
                 </button>
               </p>
 
@@ -76,15 +74,15 @@ export const CookieConsent: React.FC = () => {
               <div className="flex flex-col gap-2">
                 <button
                   onClick={handleAcceptAll}
-                  className="w-full px-4 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold text-sm hover:from-cyan-600 hover:to-blue-600 transition-all shadow-lg shadow-cyan-500/30"
+                  className="w-full px-4 py-2.5 bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-lg font-semibold text-sm hover:from-emerald-700 hover:to-teal-800 transition-all shadow-md shadow-emerald-700/20"
                 >
-                  Accept All
+                  Alle akzeptieren
                 </button>
                 <button
                   onClick={handleEssentialOnly}
-                  className="w-full px-4 py-2.5 border-2 border-white/10 text-gray-300 rounded-lg font-semibold text-sm hover:border-cyan-500/50 hover:text-white transition-all"
+                  className="w-full px-4 py-2.5 border-2 border-stone-300 text-stone-600 rounded-lg font-semibold text-sm hover:border-emerald-500/60 hover:text-stone-800 transition-all"
                 >
-                  Only Essential
+                  Nur Notwendige
                 </button>
               </div>
             </div>

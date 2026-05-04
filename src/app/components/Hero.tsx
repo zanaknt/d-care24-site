@@ -61,17 +61,17 @@ export const Hero: React.FC = () => {
                 backgroundImage: `url(${HERO_BACKGROUND_IMAGES[currentImageIndex]})`,
               }}
             />
-            {/* Lighter overlay for more visible images (60% instead of 95%) */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#050B1A]/75 via-[#0A1628]/65 to-[#050B1A]/75" />
+            {/* Warm overlay preserving image visibility */}
+            <div className="absolute inset-0 bg-gradient-to-b from-stone-900/65 via-stone-900/55 to-stone-900/65" />
           </motion.div>
         </AnimatePresence>
       </div>
 
-      {/* Decorative elements with reduced opacity */}
-      <div className="absolute inset-0 z-[1] opacity-30">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" 
-             style={{ animationDelay: '1s' }} 
+      {/* Subtle warm decorative elements */}
+      <div className="absolute inset-0 z-[1] opacity-25">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-amber-400/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-400/15 rounded-full blur-3xl animate-pulse"
+             style={{ animationDelay: '1s' }}
         />
       </div>
 
@@ -87,7 +87,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="mb-4 md:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight bg-gradient-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent break-words"
+              className="mb-4 md:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight bg-gradient-to-r from-white via-emerald-50 to-white bg-clip-text text-transparent break-words"
               style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}
             >
               {t('hero.title')}
@@ -97,7 +97,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl mb-3 md:mb-4 text-cyan-400 font-semibold break-words"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl mb-3 md:mb-4 text-emerald-300 font-semibold break-words"
               style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}
             >
               {t('hero.subtitle')}
@@ -120,7 +120,7 @@ export const Hero: React.FC = () => {
             >
               <button
                 onClick={scrollToContact}
-                className="group px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/70 flex items-center justify-center gap-2 text-sm md:text-base w-full sm:w-auto"
+                className="group px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-800 transition-all duration-300 shadow-lg shadow-emerald-800/40 hover:shadow-emerald-800/60 flex items-center justify-center gap-2 text-sm md:text-base w-full sm:w-auto"
                 aria-label="Request free consultation"
               >
                 {t('hero.cta.primary')}
@@ -128,7 +128,7 @@ export const Hero: React.FC = () => {
               </button>
               <button
                 onClick={scrollToServices}
-                className="px-6 md:px-8 py-3 md:py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-[#050B1A] transition-all duration-300 text-sm md:text-base w-full sm:w-auto"
+                className="px-6 md:px-8 py-3 md:py-4 border-2 border-white/75 text-white rounded-lg font-semibold hover:bg-white hover:text-[#1C3228] transition-all duration-300 text-sm md:text-base w-full sm:w-auto"
                 aria-label="Learn more about our services"
               >
                 {t('hero.cta.secondary')}

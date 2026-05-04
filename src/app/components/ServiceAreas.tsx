@@ -87,7 +87,7 @@ export const ServiceAreas: React.FC = () => {
     <section
       id="service-areas"
       ref={sectionRef}
-      className="py-16 md:py-20 bg-gradient-to-b from-[#0A1628] to-[#050B1A] relative overflow-hidden"
+      className="py-16 md:py-20 bg-gradient-to-b from-[#FAFAF8] to-[#EDF2EE] relative overflow-hidden"
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -95,14 +95,14 @@ export const ServiceAreas: React.FC = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-12 md:mb-16"
         >
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20 text-sm">
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-200 text-sm">
             <MapPin className="w-4 h-4" />
-            <span>Nationwide Coverage</span>
+            <span>Österreichweit verfügbar</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent px-4 break-words">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 text-[#183028] px-4 break-words">
             {t('areas.title')}
           </h2>
-          <p className="text-sm md:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto px-4 leading-relaxed break-words">
+          <p className="text-sm md:text-base lg:text-lg text-stone-600 max-w-3xl mx-auto px-4 leading-relaxed break-words">
             {t('areas.subtitle')}
           </p>
         </motion.div>
@@ -115,37 +115,37 @@ export const ServiceAreas: React.FC = () => {
               <svg
                 viewBox="0 0 909.5 466.6"
                 className="w-full h-full"
-                style={{ 
-                  filter: 'drop-shadow(0 0 20px rgba(255, 255, 255, 0.15))',
+                style={{
+                  filter: 'drop-shadow(0 0 20px rgba(46, 122, 86, 0.18))',
                   maxWidth: '800px',
                   maxHeight: '500px'
                 }}
               >
                 <g id="austria-map">
                   {/* AT4 - Upper Austria (Oberösterreich) - HIGHLIGHTED */}
-                  <path 
-                    d={svgPaths.p1f630e00} 
-                    fill="rgba(255, 255, 255, 0.15)" 
-                    stroke="rgba(6, 182, 212, 1)" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
+                  <path
+                    d={svgPaths.p1f630e00}
+                    fill="rgba(46, 122, 86, 0.22)"
+                    stroke="rgba(21, 128, 61, 1)"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     strokeWidth="2"
                     className="animate-pulse"
-                    style={{ 
+                    style={{
                       animationDuration: '3s',
-                      filter: 'drop-shadow(0 0 12px rgba(6, 182, 212, 0.8))'
+                      filter: 'drop-shadow(0 0 10px rgba(21, 128, 61, 0.45))'
                     }}
                   />
 
                   {/* Other Austrian states - white silhouette */}
-                  <path d={svgPaths.p1b3dde00} fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.4)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
-                  <path d={svgPaths.p22e65b00} fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.4)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
-                  <path d={svgPaths.p23582f00} fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.4)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
-                  <path d={svgPaths.paca2580} fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.4)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
-                  <path d={svgPaths.p12baff00} fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.4)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
-                  <path d={svgPaths.p36cbee80} fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.4)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
-                  <path d={svgPaths.p2fd98c00} fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.4)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
-                  <path d={svgPaths.p3a41bb80} fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.4)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
+                  <path d={svgPaths.p1b3dde00} fill="rgba(100, 160, 130, 0.12)" stroke="rgba(80, 130, 100, 0.55)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
+                  <path d={svgPaths.p22e65b00} fill="rgba(100, 160, 130, 0.12)" stroke="rgba(80, 130, 100, 0.55)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
+                  <path d={svgPaths.p23582f00} fill="rgba(100, 160, 130, 0.12)" stroke="rgba(80, 130, 100, 0.55)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
+                  <path d={svgPaths.paca2580} fill="rgba(100, 160, 130, 0.12)" stroke="rgba(80, 130, 100, 0.55)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
+                  <path d={svgPaths.p12baff00} fill="rgba(100, 160, 130, 0.12)" stroke="rgba(80, 130, 100, 0.55)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
+                  <path d={svgPaths.p36cbee80} fill="rgba(100, 160, 130, 0.12)" stroke="rgba(80, 130, 100, 0.55)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
+                  <path d={svgPaths.p2fd98c00} fill="rgba(100, 160, 130, 0.12)" stroke="rgba(80, 130, 100, 0.55)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
+                  <path d={svgPaths.p3a41bb80} fill="rgba(100, 160, 130, 0.12)" stroke="rgba(80, 130, 100, 0.55)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.7" />
                 </g>
               </svg>
             </div>
@@ -161,16 +161,16 @@ export const ServiceAreas: React.FC = () => {
                   transition={{ type: 'spring', damping: 25, stiffness: 300 }}
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"
                 >
-                  <div 
-                    className={`w-[380px] bg-gradient-to-br from-[#0A1628]/95 to-[#050B1A]/95 backdrop-blur-2xl rounded-3xl p-7 shadow-2xl border-2 ${
+                  <div
+                    className={`w-[380px] bg-white rounded-3xl p-7 shadow-xl border-2 ${
                       regions.find(r => r.id === activeRegion)?.featured
-                        ? 'border-cyan-500/60'
-                        : 'border-white/20'
+                        ? 'border-emerald-400/60'
+                        : 'border-stone-200'
                     }`}
                     style={{
                       boxShadow: regions.find(r => r.id === activeRegion)?.featured
-                        ? '0 0 60px rgba(6, 182, 212, 0.4), inset 0 0 30px rgba(6, 182, 212, 0.08)'
-                        : '0 20px 60px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(255, 255, 255, 0.03)'
+                        ? '0 8px 40px rgba(21, 128, 61, 0.18)'
+                        : '0 8px 40px rgba(0, 0, 0, 0.10)'
                     }}
                   >
                     {(() => {
@@ -182,14 +182,14 @@ export const ServiceAreas: React.FC = () => {
                           {/* Header */}
                           <div className="flex items-start justify-between mb-5">
                             <h4 className={`text-xl font-bold ${
-                              region.featured ? 'text-cyan-400' : 'text-white'
+                              region.featured ? 'text-emerald-700' : 'text-[#183028]'
                             }`}>
                               {region.name}
                             </h4>
                             <div className="flex items-center gap-2">
                               {region.featured && (
-                                <span className="text-xs bg-cyan-500/25 text-cyan-300 px-3 py-1.5 rounded-full border border-cyan-500/40 font-medium">
-                                  Primary Focus
+                                <span className="text-xs bg-emerald-50 text-emerald-700 px-3 py-1.5 rounded-full border border-emerald-200 font-medium">
+                                  Schwerpunkt
                                 </span>
                               )}
                               <button
@@ -207,7 +207,7 @@ export const ServiceAreas: React.FC = () => {
                             {region.cities.map((city, idx) => (
                               <span
                                 key={idx}
-                                className="text-sm bg-white/8 text-gray-200 px-3.5 py-2 rounded-xl border border-white/15 hover:border-cyan-500/40 hover:bg-white/12 transition-all"
+                                className="text-sm bg-stone-50 text-stone-700 px-3.5 py-2 rounded-xl border border-stone-200 hover:border-emerald-400/50 hover:bg-emerald-50/50 transition-all"
                               >
                                 {city}
                               </span>
@@ -230,9 +230,9 @@ export const ServiceAreas: React.FC = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.1 + index * 0.1 }}
-                className={`bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-5 md:p-6 border ${
-                  region.featured ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20' : 'border-white/10'
-                } hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20`}
+                className={`bg-white rounded-2xl p-5 md:p-6 border ${
+                  region.featured ? 'border-emerald-400/60 shadow-md shadow-emerald-600/10' : 'border-stone-200'
+                } hover:border-emerald-400/60 transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-emerald-600/10`}
               >
                 <div className="flex items-start gap-3 mb-3">
                   <div
@@ -241,12 +241,12 @@ export const ServiceAreas: React.FC = () => {
                     } mt-1.5 flex-shrink-0`}
                   />
                   <div className="flex-1">
-                    <h3 className="text-base md:text-lg text-white break-words">
+                    <h3 className="text-base md:text-lg text-[#183028] break-words">
                       {region.name}
                     </h3>
                     {region.featured && (
-                      <span className="inline-block mt-1 text-xs bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded-full border border-cyan-500/30">
-                        Primary Focus
+                      <span className="inline-block mt-1 text-xs bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full border border-emerald-200">
+                        Schwerpunkt
                       </span>
                     )}
                   </div>
@@ -255,7 +255,7 @@ export const ServiceAreas: React.FC = () => {
                   {region.cities.map((city, idx) => (
                     <span
                       key={idx}
-                      className="text-xs text-gray-300 bg-white/5 px-2 py-1 rounded-md border border-white/10 break-words"
+                      className="text-xs text-stone-600 bg-stone-50 px-2 py-1 rounded-md border border-stone-200 break-words"
                     >
                       {city}
                     </span>
@@ -272,8 +272,8 @@ export const ServiceAreas: React.FC = () => {
           transition={{ delay: 0.6 }}
           className="mt-8 md:mt-12 text-center"
         >
-          <p className="text-sm md:text-base lg:text-lg text-gray-400 max-w-3xl mx-auto px-4 leading-relaxed break-words">
-            <strong className="text-white">{t('areas.specialization')}</strong>
+          <p className="text-sm md:text-base lg:text-lg text-stone-500 max-w-3xl mx-auto px-4 leading-relaxed break-words">
+            <strong className="text-[#183028]">{t('areas.specialization')}</strong>
           </p>
         </motion.div>
       </div>

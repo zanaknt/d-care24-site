@@ -138,12 +138,12 @@ Please confirm this appointment with the client.
     <section
       id="booking"
       ref={sectionRef}
-      className="py-16 md:py-24 bg-gradient-to-b from-[#050B1A] via-[#0A1628] to-[#050B1A] relative overflow-hidden"
+      className="py-16 md:py-24 bg-gradient-to-b from-[#EDF2EE] via-[#F5F0E8] to-[#EDF2EE] relative overflow-hidden"
     >
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+      {/* Subtle warm decorative elements */}
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-200/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -155,19 +155,19 @@ Please confirm this appointment with the client.
           className="text-center mb-12 md:mb-16"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/30 text-sm backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-200 text-sm">
             <Calendar className="w-4 h-4" />
-            <span>Book Your Free Consultation</span>
+            <span>Kostenloses Erstgespräch buchen</span>
           </div>
 
           {/* Title */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent px-4">
-            Free 1:1 Consultation Call
+          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 text-[#183028] px-4">
+            Kostenloser Beratungsruf
           </h2>
 
           {/* Subtitle */}
-          <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4 leading-relaxed">
-            Find the right care solution in just 15 minutes. Schedule your personal session now.
+          <p className="text-base md:text-lg lg:text-xl text-stone-600 max-w-3xl mx-auto px-4 leading-relaxed">
+            Finden Sie die passende Betreuungslösung in nur 15 Minuten. Termin jetzt vereinbaren.
           </p>
         </motion.div>
 
@@ -179,14 +179,14 @@ Please confirm this appointment with the client.
               initial={{ opacity: 0, y: 30 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-cyan-500/40 transition-all duration-300"
+              className="bg-white rounded-2xl p-6 border border-stone-200 hover:border-emerald-400/50 transition-all duration-300 shadow-sm hover:shadow-md"
             >
-              <div className="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4 border border-cyan-500/20">
-                <Clock className="w-6 h-6 text-cyan-400" />
+              <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 border border-emerald-200">
+                <Clock className="w-6 h-6 text-emerald-600" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">15-30 Minutes</h3>
-              <p className="text-sm text-gray-400">
-                Quick and efficient consultation tailored to your needs
+              <h3 className="text-lg font-semibold text-[#183028] mb-2">15–30 Minuten</h3>
+              <p className="text-sm text-stone-600">
+                Effiziente Beratung, individuell auf Ihre Bedürfnisse abgestimmt
               </p>
             </motion.div>
 
@@ -194,14 +194,14 @@ Please confirm this appointment with the client.
               initial={{ opacity: 0, y: 30 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-cyan-500/40 transition-all duration-300"
+              className="bg-white rounded-2xl p-6 border border-stone-200 hover:border-emerald-400/50 transition-all duration-300 shadow-sm hover:shadow-md"
             >
-              <div className="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4 border border-cyan-500/20">
-                <Video className="w-6 h-6 text-cyan-400" />
+              <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 border border-emerald-200">
+                <Video className="w-6 h-6 text-emerald-600" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Video or Phone</h3>
-              <p className="text-sm text-gray-400">
-                Choose your preferred consultation method
+              <h3 className="text-lg font-semibold text-[#183028] mb-2">Video oder Telefon</h3>
+              <p className="text-sm text-stone-600">
+                Wählen Sie Ihre bevorzugte Beratungsform
               </p>
             </motion.div>
 
@@ -209,14 +209,14 @@ Please confirm this appointment with the client.
               initial={{ opacity: 0, y: 30 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-cyan-500/40 transition-all duration-300"
+              className="bg-white rounded-2xl p-6 border border-stone-200 hover:border-emerald-400/50 transition-all duration-300 shadow-sm hover:shadow-md"
             >
-              <div className="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4 border border-cyan-500/20">
-                <Calendar className="w-6 h-6 text-cyan-400" />
+              <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 border border-emerald-200">
+                <Calendar className="w-6 h-6 text-emerald-600" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Flexible Schedule</h3>
-              <p className="text-sm text-gray-400">
-                Book a time that works best for you
+              <h3 className="text-lg font-semibold text-[#183028] mb-2">Flexibler Zeitplan</h3>
+              <p className="text-sm text-stone-600">
+                Termin wählen, der Ihnen am besten passt
               </p>
             </motion.div>
           </div>
@@ -228,44 +228,39 @@ Please confirm this appointment with the client.
             transition={{ duration: 0.6, delay: 0.5 }}
             className="max-w-4xl mx-auto"
           >
-            <div className="relative rounded-2xl bg-gradient-to-br from-[#111827] to-[#0A1628] p-1 shadow-2xl">
-              {/* Glowing border effect */}
-              <div className="absolute -inset-[1px] bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 rounded-2xl opacity-50 blur-sm animate-pulse" 
-                   style={{ animationDuration: '3s' }} 
-              />
-              
+            <div className="relative rounded-2xl bg-white border border-stone-200 shadow-lg overflow-hidden">
               {/* Inner container */}
-              <div className="relative bg-[#0A1628] rounded-2xl overflow-hidden p-6 md:p-8">
+              <div className="relative rounded-2xl overflow-hidden p-6 md:p-8">
                 
                 {/* Step Indicator */}
                 <div className="flex items-center justify-center mb-8 gap-2">
-                  <div className={`flex items-center gap-2 ${step === 'date' ? 'text-cyan-400' : step === 'time' || step === 'info' || step === 'success' ? 'text-cyan-500' : 'text-gray-500'}`}>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${step === 'date' ? 'border-cyan-400 bg-cyan-500/20' : step === 'time' || step === 'info' || step === 'success' ? 'border-cyan-500 bg-cyan-500/30' : 'border-gray-500'}`}>
+                  <div className={`flex items-center gap-2 ${step === 'date' ? 'text-emerald-600' : step === 'time' || step === 'info' || step === 'success' ? 'text-emerald-700' : 'text-stone-400'}`}>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${step === 'date' ? 'border-emerald-500 bg-emerald-50' : step === 'time' || step === 'info' || step === 'success' ? 'border-emerald-600 bg-emerald-100' : 'border-stone-300'}`}>
                       {step === 'time' || step === 'info' || step === 'success' ? <Check className="w-4 h-4" /> : '1'}
                     </div>
-                    <span className="text-sm hidden sm:inline">Date</span>
+                    <span className="text-sm hidden sm:inline">Datum</span>
                   </div>
-                  <div className="w-8 h-0.5 bg-gray-600" />
-                  <div className={`flex items-center gap-2 ${step === 'time' ? 'text-cyan-400' : step === 'info' || step === 'success' ? 'text-cyan-500' : 'text-gray-500'}`}>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${step === 'time' ? 'border-cyan-400 bg-cyan-500/20' : step === 'info' || step === 'success' ? 'border-cyan-500 bg-cyan-500/30' : 'border-gray-500'}`}>
+                  <div className="w-8 h-0.5 bg-stone-300" />
+                  <div className={`flex items-center gap-2 ${step === 'time' ? 'text-emerald-600' : step === 'info' || step === 'success' ? 'text-emerald-700' : 'text-stone-400'}`}>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${step === 'time' ? 'border-emerald-500 bg-emerald-50' : step === 'info' || step === 'success' ? 'border-emerald-600 bg-emerald-100' : 'border-stone-300'}`}>
                       {step === 'info' || step === 'success' ? <Check className="w-4 h-4" /> : '2'}
                     </div>
-                    <span className="text-sm hidden sm:inline">Time</span>
+                    <span className="text-sm hidden sm:inline">Uhrzeit</span>
                   </div>
-                  <div className="w-8 h-0.5 bg-gray-600" />
-                  <div className={`flex items-center gap-2 ${step === 'info' ? 'text-cyan-400' : step === 'success' ? 'text-cyan-500' : 'text-gray-500'}`}>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${step === 'info' ? 'border-cyan-400 bg-cyan-500/20' : step === 'success' ? 'border-cyan-500 bg-cyan-500/30' : 'border-gray-500'}`}>
+                  <div className="w-8 h-0.5 bg-stone-300" />
+                  <div className={`flex items-center gap-2 ${step === 'info' ? 'text-emerald-600' : step === 'success' ? 'text-emerald-700' : 'text-stone-400'}`}>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${step === 'info' ? 'border-emerald-500 bg-emerald-50' : step === 'success' ? 'border-emerald-600 bg-emerald-100' : 'border-stone-300'}`}>
                       {step === 'success' ? <Check className="w-4 h-4" /> : '3'}
                     </div>
-                    <span className="text-sm hidden sm:inline">Info</span>
+                    <span className="text-sm hidden sm:inline">Angaben</span>
                   </div>
                 </div>
 
                 {/* Step: Select Date */}
                 {step === 'date' && (
                   <div className="space-y-6">
-                    <h3 className="text-xl md:text-2xl text-white text-center mb-6">
-                      Select a Date
+                    <h3 className="text-xl md:text-2xl text-[#183028] text-center mb-6">
+                      Datum wählen
                     </h3>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
                       {availableDates.map((date, index) => {
@@ -274,21 +269,21 @@ Please confirm this appointment with the client.
                           <button
                             key={index}
                             onClick={() => handleDateSelect(date)}
-                            className="group relative p-4 bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-500/50 rounded-xl transition-all duration-300 text-left"
+                            className="group relative p-4 bg-stone-50 hover:bg-emerald-50 border border-stone-200 hover:border-emerald-400/60 rounded-xl transition-all duration-300 text-left"
                           >
                             {isToday && (
-                              <span className="absolute top-2 right-2 text-[10px] bg-cyan-500 text-white px-2 py-0.5 rounded-full">
-                                Today
+                              <span className="absolute top-2 right-2 text-[10px] bg-emerald-600 text-white px-2 py-0.5 rounded-full">
+                                Heute
                               </span>
                             )}
-                            <div className="text-gray-400 text-xs mb-1">
-                              {date.toLocaleDateString('en-US', { weekday: 'short' })}
+                            <div className="text-stone-500 text-xs mb-1">
+                              {date.toLocaleDateString('de-AT', { weekday: 'short' })}
                             </div>
-                            <div className="text-white text-lg font-semibold">
+                            <div className="text-stone-800 text-lg font-semibold">
                               {date.getDate()}
                             </div>
-                            <div className="text-gray-400 text-xs">
-                              {date.toLocaleDateString('en-US', { month: 'short' })}
+                            <div className="text-stone-500 text-xs">
+                              {date.toLocaleDateString('de-AT', { month: 'short' })}
                             </div>
                           </button>
                         );
@@ -303,14 +298,14 @@ Please confirm this appointment with the client.
                     <div className="text-center mb-6">
                       <button
                         onClick={() => setStep('date')}
-                        className="text-cyan-400 hover:text-cyan-300 text-sm mb-2"
+                        className="text-emerald-600 hover:text-emerald-700 text-sm mb-2"
                       >
-                        ← Change Date
+                        ← Datum ändern
                       </button>
-                      <h3 className="text-xl md:text-2xl text-white">
-                        Select a Time
+                      <h3 className="text-xl md:text-2xl text-[#183028]">
+                        Uhrzeit wählen
                       </h3>
-                      <p className="text-gray-400 text-sm mt-2">
+                      <p className="text-stone-500 text-sm mt-2">
                         {formatDate(selectedDate)}
                       </p>
                     </div>
@@ -319,9 +314,9 @@ Please confirm this appointment with the client.
                         <button
                           key={index}
                           onClick={() => handleTimeSelect(time)}
-                          className="p-3 bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-500/50 rounded-xl transition-all duration-300 text-center"
+                          className="p-3 bg-stone-50 hover:bg-emerald-50 border border-stone-200 hover:border-emerald-400/60 rounded-xl transition-all duration-300 text-center"
                         >
-                          <div className="text-white font-medium">{time}</div>
+                          <div className="text-stone-800 font-medium">{time}</div>
                         </button>
                       ))}
                     </div>
@@ -334,111 +329,111 @@ Please confirm this appointment with the client.
                     <div className="text-center mb-6">
                       <button
                         onClick={() => setStep('time')}
-                        className="text-cyan-400 hover:text-cyan-300 text-sm mb-2"
+                        className="text-emerald-600 hover:text-emerald-700 text-sm mb-2"
                       >
-                        ← Change Time
+                        ← Uhrzeit ändern
                       </button>
-                      <h3 className="text-xl md:text-2xl text-white">
-                        Your Information
+                      <h3 className="text-xl md:text-2xl text-[#183028]">
+                        Ihre Kontaktdaten
                       </h3>
-                      <p className="text-gray-400 text-sm mt-2">
+                      <p className="text-stone-500 text-sm mt-2">
                         {formatDate(selectedDate)} at {selectedTime}
                       </p>
                     </div>
                     
                     <form onSubmit={handleSubmit} className="space-y-4 max-w-2xl mx-auto">
                       <div>
-                        <label htmlFor="name" className="block mb-2 text-white text-sm">
+                        <label htmlFor="name" className="block mb-2 text-stone-700 text-sm font-medium">
                           Name *
                         </label>
                         <div className="relative">
-                          <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                          <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-400" />
                           <input
                             type="text"
                             id="name"
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className={`w-full pl-12 pr-4 py-3 bg-white/5 border-2 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 transition-all ${
-                              errors.name ? 'border-red-500' : 'border-white/10'
+                            className={`w-full pl-12 pr-4 py-3 bg-white border-2 rounded-xl text-stone-800 placeholder-stone-400 focus:outline-none focus:border-emerald-500 transition-all ${
+                              errors.name ? 'border-red-400' : 'border-stone-300'
                             }`}
-                            placeholder="Your full name"
+                            placeholder="Ihr vollständiger Name"
                           />
                         </div>
                         {errors.name && (
-                          <p className="mt-1 text-xs text-red-400">{errors.name}</p>
+                          <p className="mt-1 text-xs text-red-500">{errors.name}</p>
                         )}
                       </div>
 
                       <div>
-                        <label htmlFor="email" className="block mb-2 text-white text-sm">
-                          Email *
+                        <label htmlFor="email" className="block mb-2 text-stone-700 text-sm font-medium">
+                          E-Mail *
                         </label>
                         <div className="relative">
-                          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-400" />
                           <input
                             type="email"
                             id="email"
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className={`w-full pl-12 pr-4 py-3 bg-white/5 border-2 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 transition-all ${
-                              errors.email ? 'border-red-500' : 'border-white/10'
+                            className={`w-full pl-12 pr-4 py-3 bg-white border-2 rounded-xl text-stone-800 placeholder-stone-400 focus:outline-none focus:border-emerald-500 transition-all ${
+                              errors.email ? 'border-red-400' : 'border-stone-300'
                             }`}
-                            placeholder="your@email.com"
+                            placeholder="ihre@email.at"
                           />
                         </div>
                         {errors.email && (
-                          <p className="mt-1 text-xs text-red-400">{errors.email}</p>
+                          <p className="mt-1 text-xs text-red-500">{errors.email}</p>
                         )}
                       </div>
 
                       <div>
-                        <label htmlFor="phone" className="block mb-2 text-white text-sm">
-                          Phone *
+                        <label htmlFor="phone" className="block mb-2 text-stone-700 text-sm font-medium">
+                          Telefon *
                         </label>
                         <div className="relative">
-                          <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                          <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-400" />
                           <input
                             type="tel"
                             id="phone"
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
-                            className={`w-full pl-12 pr-4 py-3 bg-white/5 border-2 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 transition-all ${
-                              errors.phone ? 'border-red-500' : 'border-white/10'
+                            className={`w-full pl-12 pr-4 py-3 bg-white border-2 rounded-xl text-stone-800 placeholder-stone-400 focus:outline-none focus:border-emerald-500 transition-all ${
+                              errors.phone ? 'border-red-400' : 'border-stone-300'
                             }`}
                             placeholder="+43 123 456789"
                           />
                         </div>
                         {errors.phone && (
-                          <p className="mt-1 text-xs text-red-400">{errors.phone}</p>
+                          <p className="mt-1 text-xs text-red-500">{errors.phone}</p>
                         )}
                       </div>
 
                       <div>
-                        <label htmlFor="message" className="block mb-2 text-white text-sm">
-                          Additional Notes (Optional)
+                        <label htmlFor="message" className="block mb-2 text-stone-700 text-sm font-medium">
+                          Anmerkungen (optional)
                         </label>
                         <div className="relative">
-                          <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+                          <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-stone-400" />
                           <textarea
                             id="message"
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
                             rows={4}
-                            className="w-full pl-12 pr-4 py-3 bg-white/5 border-2 border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 transition-all resize-none"
-                            placeholder="Tell us about your care needs..."
+                            className="w-full pl-12 pr-4 py-3 bg-white border-2 border-stone-300 rounded-xl text-stone-800 placeholder-stone-400 focus:outline-none focus:border-emerald-500 transition-all resize-none"
+                            placeholder="Schildern Sie uns Ihren Betreuungsbedarf..."
                           />
                         </div>
                       </div>
 
                       <button
                         type="submit"
-                        className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/50 font-semibold"
+                        className="w-full py-4 bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-xl hover:from-emerald-700 hover:to-teal-800 transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-700/30 font-semibold"
                       >
-                        Confirm Booking
+                        Termin bestätigen
                         <ArrowRight className="w-5 h-5" />
                       </button>
                     </form>
@@ -455,27 +450,27 @@ Please confirm this appointment with the client.
                     <div className="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto border-2 border-emerald-500">
                       <Check className="w-10 h-10 text-emerald-400" />
                     </div>
-                    <h3 className="text-2xl md:text-3xl text-emerald-400 mb-2">
-                      Booking Request Sent!
+                    <h3 className="text-2xl md:text-3xl text-emerald-700 mb-2">
+                      Anfrage gesendet!
                     </h3>
-                    <div className="max-w-md mx-auto space-y-3 text-gray-300">
+                    <div className="max-w-md mx-auto space-y-3 text-stone-600">
                       <p>
-                        Your consultation request has been sent to our team.
+                        Ihre Beratungsanfrage wurde an unser Team weitergeleitet.
                       </p>
-                      <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                        <p className="text-sm text-gray-400 mb-2">Booking Details:</p>
-                        <p className="text-cyan-400">{selectedDate && formatDate(selectedDate)}</p>
-                        <p className="text-cyan-400">{selectedTime}</p>
+                      <div className="bg-emerald-50 rounded-xl p-4 border border-emerald-200">
+                        <p className="text-sm text-stone-500 mb-2">Ihre Termindetails:</p>
+                        <p className="text-emerald-700 font-medium">{selectedDate && formatDate(selectedDate)}</p>
+                        <p className="text-emerald-700 font-medium">{selectedTime}</p>
                       </div>
-                      <p className="text-sm text-gray-400">
-                        We will confirm your appointment via email or phone within 24 hours.
+                      <p className="text-sm text-stone-500">
+                        Wir bestätigen Ihren Termin per E-Mail oder Telefon innerhalb von 24 Stunden.
                       </p>
                     </div>
                     <button
                       onClick={resetBooking}
-                      className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl transition-all border border-white/20"
+                      className="px-8 py-3 bg-stone-100 hover:bg-stone-200 text-stone-700 rounded-xl transition-all border border-stone-300"
                     >
-                      Book Another Appointment
+                      Weiteren Termin buchen
                     </button>
                   </motion.div>
                 )}
@@ -484,13 +479,13 @@ Please confirm this appointment with the client.
             </div>
 
             {/* Help text */}
-            <p className="text-center text-gray-400 text-sm mt-6 px-4">
-              Questions? Contact us at{' '}
-              <a href="mailto:office@d-care24.at" className="text-cyan-400 hover:underline">
+            <p className="text-center text-stone-500 text-sm mt-6 px-4">
+              Fragen? Kontaktieren Sie uns:{' '}
+              <a href="mailto:office@d-care24.at" className="text-emerald-700 hover:underline">
                 office@d-care24.at
               </a>{' '}
-              or call{' '}
-              <a href="tel:+436704047322" className="text-cyan-400 hover:underline">
+              oder{' '}
+              <a href="tel:+436704047322" className="text-emerald-700 hover:underline">
                 0670 4047322
               </a>
             </p>
@@ -504,15 +499,15 @@ Please confirm this appointment with the client.
           width: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.04);
           border-radius: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(0, 188, 212, 0.5);
+          background: rgba(5, 150, 105, 0.4);
           border-radius: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(0, 188, 212, 0.7);
+          background: rgba(5, 150, 105, 0.65);
         }
       `}</style>
     </section>

@@ -27,7 +27,7 @@ const App: React.FC = () => {
     <LanguageProvider>
       <Router>
         <SEOHead />
-        <div className="min-h-screen bg-[#050B1A] text-white">
+        <div className="min-h-screen bg-[#FAFAF8] text-stone-800">
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />

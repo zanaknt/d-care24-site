@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[#050B1A]/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-[#1C3228]/97 backdrop-blur-lg shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 py-4">
@@ -87,7 +87,7 @@ export const Navbar: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-300 hover:text-cyan-400 transition-colors font-medium text-base tracking-wide"
+                className="text-stone-200 hover:text-emerald-300 transition-colors font-medium text-base tracking-wide"
                 aria-label={`Navigate to ${item.label}`}
               >
                 {item.label}
@@ -98,15 +98,15 @@ export const Navbar: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
-                className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-white/5 to-white/10 border border-white/20 rounded-xl hover:border-cyan-400/50 transition-all duration-300 group"
+                className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-white/10 to-white/15 border border-white/25 rounded-xl hover:border-emerald-400/60 transition-all duration-300 group"
                 aria-label="Select language"
               >
-                <Globe className="w-4 h-4 text-cyan-400" />
-                <span className="text-white font-medium text-sm">
+                <Globe className="w-4 h-4 text-emerald-300" />
+                <span className="text-stone-100 font-medium text-sm">
                   {currentLanguage?.code.toUpperCase()}
                 </span>
                 <ChevronDown
-                  className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${
+                  className={`w-4 h-4 text-stone-300 transition-transform duration-300 ${
                     isLangDropdownOpen ? 'rotate-180' : ''
                   }`}
                 />
@@ -120,22 +120,22 @@ export const Navbar: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute right-0 mt-2 w-48 bg-[#0A1628] border border-white/20 rounded-xl shadow-2xl overflow-hidden"
+                    className="absolute right-0 mt-2 w-48 bg-[#1C3228] border border-white/20 rounded-xl shadow-2xl overflow-hidden"
                   >
                     {languages.map((lang) => (
                       <button
                         key={lang.code}
                         onClick={() => handleLanguageChange(lang.code)}
-                        className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-cyan-500/10 transition-colors ${
+                        className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-emerald-600/15 transition-colors ${
                           language === lang.code
-                            ? 'bg-cyan-500/20 text-cyan-400'
-                            : 'text-gray-300'
+                            ? 'bg-emerald-600/25 text-emerald-300'
+                            : 'text-stone-300'
                         }`}
                       >
                         <span className="text-xl">{lang.flag}</span>
                         <span className="font-medium text-sm">{lang.label}</span>
                         {language === lang.code && (
-                          <span className="ml-auto text-cyan-400 text-xs">✓</span>
+                          <span className="ml-auto text-emerald-300 text-xs">✓</span>
                         )}
                       </button>
                     ))}
@@ -147,7 +147,7 @@ export const Navbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-white hover:text-cyan-400 transition-colors"
+            className="lg:hidden p-2 text-stone-100 hover:text-emerald-300 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -164,7 +164,7 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-[#0A1628] border-t border-white/10"
+            className="lg:hidden bg-[#1C3228] border-t border-white/10"
           >
             <div className="container mx-auto px-4 py-6 space-y-4">
               {/* Mobile Nav Items */}
@@ -172,7 +172,7 @@ export const Navbar: React.FC = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors font-medium py-2 text-base"
+                  className="block w-full text-left text-stone-200 hover:text-emerald-300 transition-colors font-medium py-2 text-base"
                 >
                   {item.label}
                 </button>
@@ -180,9 +180,9 @@ export const Navbar: React.FC = () => {
 
               {/* Mobile Language Selector */}
               <div className="pt-4 border-t border-white/10">
-                <p className="text-gray-400 text-sm mb-3 flex items-center gap-2">
+                <p className="text-stone-400 text-sm mb-3 flex items-center gap-2">
                   <Globe className="w-4 h-4" />
-                  Language
+                  Sprache / Language
                 </p>
                 <div className="grid grid-cols-2 gap-2">
                   {languages.map((lang) => (
@@ -191,8 +191,8 @@ export const Navbar: React.FC = () => {
                       onClick={() => handleLanguageChange(lang.code)}
                       className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all ${
                         language === lang.code
-                          ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
-                          : 'bg-white/5 text-gray-300 border border-white/10 hover:border-cyan-400/30'
+                          ? 'bg-emerald-600/25 text-emerald-300 border border-emerald-400/40'
+                          : 'bg-white/5 text-stone-300 border border-white/10 hover:border-emerald-400/40'
                       }`}
                     >
                       <span className="text-lg">{lang.flag}</span>

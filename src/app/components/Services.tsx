@@ -36,7 +36,7 @@ export const Services: React.FC = () => {
       icon: Shield,
       title: t('services.legal.title'),
       description: t('services.legal.desc'),
-      gradient: 'from-cyan-500 to-blue-500',
+      gradient: 'from-teal-600 to-emerald-700',
     },
     {
       icon: Users,
@@ -56,10 +56,10 @@ export const Services: React.FC = () => {
     <section
       id="services"
       ref={sectionRef}
-      className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-[#050B1A] to-[#0A1628]"
+      className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-[#F5F0E8] to-[#FAFAF8]"
     >
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50" />
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-600 to-transparent opacity-40" />
 
       <div className="container mx-auto px-4">
         <motion.div
@@ -68,11 +68,11 @@ export const Services: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent px-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 text-[#183028] px-4">
             {t('services.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full mb-6" />
-          <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto px-4">
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-600 to-teal-600 mx-auto rounded-full mb-6" />
+          <p className="text-stone-600 text-base md:text-lg max-w-2xl mx-auto px-4">
             {t('services.subtitle')}
           </p>
         </motion.div>
@@ -86,7 +86,7 @@ export const Services: React.FC = () => {
               transition={{ delay: 0.2 + index * 0.1, duration: 0.6 }}
               className="group relative"
             >
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 h-full flex flex-col">
+              <div className="bg-white rounded-2xl p-6 md:p-8 border border-stone-200 hover:border-emerald-400/60 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-emerald-600/10 h-full flex flex-col">
                 {/* Icon */}
                 <div
                   className={`w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}
@@ -95,10 +95,10 @@ export const Services: React.FC = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg md:text-xl mb-3 text-white group-hover:text-cyan-400 transition-colors break-words">
+                <h3 className="text-lg md:text-xl mb-3 text-[#183028] group-hover:text-emerald-700 transition-colors break-words">
                   {service.title}
                 </h3>
-                <p className="text-sm md:text-base text-gray-400 leading-relaxed break-words">
+                <p className="text-sm md:text-base text-stone-600 leading-relaxed break-words">
                   {service.description}
                 </p>
               </div>

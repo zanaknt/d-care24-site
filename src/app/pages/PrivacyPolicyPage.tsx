@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 
 export const PrivacyPolicyPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#050B1A] to-[#0A1628] text-white pt-24 pb-16">
+    <div className="min-h-screen bg-[#FAFAF8] text-stone-800 pt-24 pb-16">
       <div className="container mx-auto px-4">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-emerald-700 hover:text-emerald-800 transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
@@ -20,17 +20,17 @@ export const PrivacyPolicyPage: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-6 md:p-10">
+          <div className="max-w-4xl mx-auto bg-white rounded-3xl border border-stone-200 shadow-md p-6 md:p-10">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-700 rounded-xl flex items-center justify-center">
                 <Shield className="w-6 h-6 text-white" />
               </div>
-              <h1 className="text-2xl md:text-3xl text-white">Privacy Policy</h1>
+              <h1 className="text-2xl md:text-3xl text-[#183028]">Datenschutzerklärung</h1>
             </div>
 
-            <div className="space-y-6 text-gray-300 text-sm md:text-base">
+            <div className="space-y-6 text-stone-600 text-sm md:text-base">
               <div>
-                <h3 className="text-white font-semibold mb-2">1. Data Protection Overview</h3>
+                <h3 className="text-stone-800 font-semibold mb-2">1. Data Protection Overview</h3>
                 <p className="leading-relaxed">
                   D-Care24+ takes the protection of your personal data very seriously. We treat
                   your personal data confidentially and in accordance with statutory data
@@ -39,7 +39,7 @@ export const PrivacyPolicyPage: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-white font-semibold mb-2">2. Data Controller</h3>
+                <h3 className="text-stone-800 font-semibold mb-2">2. Data Controller</h3>
                 <p className="leading-relaxed">
                   The party responsible for processing data on this website (data controller) is:
                 </p>
@@ -55,7 +55,7 @@ export const PrivacyPolicyPage: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-white font-semibold mb-2">3. Data Collection on This Website</h3>
+                <h3 className="text-stone-800 font-semibold mb-2">3. Data Collection on This Website</h3>
                 <h4 className="text-white font-medium mt-3 mb-1">Cookies</h4>
                 <p className="leading-relaxed">
                   Our website uses cookies. Cookies are small text files that are stored on your
@@ -73,7 +73,7 @@ export const PrivacyPolicyPage: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-white font-semibold mb-2">4. Your Rights (GDPR)</h3>
+                <h3 className="text-stone-800 font-semibold mb-2">4. Your Rights (GDPR)</h3>
                 <p className="leading-relaxed">
                   You have the right to information, correction, deletion, restriction of
                   processing, data portability, and objection. You also have the right to lodge a
@@ -82,7 +82,7 @@ export const PrivacyPolicyPage: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-white font-semibold mb-2">5. Analytics and Third-Party Tools</h3>
+                <h3 className="text-stone-800 font-semibold mb-2">5. Analytics and Third-Party Tools</h3>
                 <p className="leading-relaxed">
                   We use basic analytics tools to understand how visitors use our website. These
                   tools collect data anonymously and help us improve user experience. No personal
@@ -91,7 +91,7 @@ export const PrivacyPolicyPage: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-white font-semibold mb-2">6. Data Security</h3>
+                <h3 className="text-stone-800 font-semibold mb-2">6. Data Security</h3>
                 <p className="leading-relaxed">
                   We use SSL/TLS encryption for data transmission. However, we would like to point
                   out that data transmission over the Internet can have security gaps.
